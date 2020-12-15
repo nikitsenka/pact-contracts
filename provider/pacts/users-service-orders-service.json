@@ -1,0 +1,44 @@
+{
+  "provider": {
+    "name": "orders-service"
+  },
+  "consumer": {
+    "name": "users-service"
+  },
+  "interactions": [
+    {
+      "description": "Request to get all orders",
+      "request": {
+        "method": "GET",
+        "path": "/orders"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": [
+          {
+            "id": "1"
+          },
+          {
+            "id": "2"
+          }
+        ]
+      },
+      "providerStates": [
+        {
+          "name": "Order service operates successfully"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    },
+    "pact-jvm": {
+      "version": "4.1.0"
+    }
+  }
+}
